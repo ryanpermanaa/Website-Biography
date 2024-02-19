@@ -149,7 +149,11 @@
     border-radius: 10px;
 
     cursor: pointer;
-    transition: 300ms;
+    transition: all 300ms, scale 100ms;
+}
+
+.hero__section .view_more-btn:active {
+    scale: .95;
 }
 
 .hero__section .view_more-btn.hovered {
