@@ -1,0 +1,169 @@
+/*? Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+/*? Birth Stone */
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+/*? Niconne */
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+:root {
+    /** fonts */
+    --fn-poppins: "Poppins", 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    --fn-birthstone: "Birthstone", italic, sans-serif;
+    --fn-niconne: "Niconne", italic, sans-serif;
+
+    /** colors */
+    --clr-white: white;
+    --clr-black: black;
+    --clr-primary: #4F5BED;
+    --clr-secondary: #F0C36C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* 
+    * NAVBAR SECTION - LuxOrion
+*/
+
+.navbar__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+
+    width: 100%;
+    height: 5rem;
+    padding-inline: 4rem;
+
+    color: var(--clr-black);
+
+    background: whitesmoke;
+}
+
+.nav-logo {
+    font-family: var(--fn-birthstone);
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-list .nav-items {
+    position: relative;
+    color: var(--clr-black);
+    font-family: var(--fn-poppins);
+    text-decoration: none;
+}
+
+.nav-list .nav-items::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: -2px;
+    margin: auto;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--clr-primary);
+    transition: 250ms;
+}
+
+.nav-list .nav-items.active::after {
+    width: 100%;
+}
+
+/* 
+    * HERO SECTION - LuxOrion
+*/
+
+.hero__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 8rem 7rem;
+}
+
+.hero__section > div {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.hero__section .upper-tagline {
+    font-size: 1rem;
+    font-family: var(--fn-poppins);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.hero__section .person-title {
+    font-size: 5rem;
+    font-weight: lighter;
+    font-family: var(--fn-niconne);
+    color: var(--clr-secondary);
+}
+
+.hero__section .person-description {
+    position: relative;
+    font-size: 1rem;
+    font-family: var(--fn-poppins);
+    text-align: justify;
+    padding-left: 1.5rem;
+    padding-block: 1rem;
+    border-left: 3px solid var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.hero__section .view_more-btn {
+    color: var(--clr-primary);
+    font-size: 1.1rem;
+    font-family: var(--fn-poppins);
+
+    display: flex;
+    padding: .5rem 2rem;
+    
+    background: transparent;
+    border: 3px solid var(--clr-primary);
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.hero__section .view_more-btn.hovered {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.hero__section .view_more-btn img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 10px;
+}
+
+.hero__section .hero-blob {
+    width: 25rem;
+    height: auto;
+}
