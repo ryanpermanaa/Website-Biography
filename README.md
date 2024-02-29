@@ -1,3 +1,3 @@
 # Biography Website
 
-Another project from LuxOrionCoding about a biography website for school assignment.
+Another project from LuxOrionCoding and his Friends about a biography website for school assignment.
