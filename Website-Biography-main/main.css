@@ -1,0 +1,394 @@
+/*? Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+/*? Birth Stone */
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+/*? Niconne */
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+:root {
+    /** fonts */
+    --fn-poppins: "Poppins", 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    --fn-birthstone: "Birthstone", italic, sans-serif;
+    --fn-niconne: "Niconne", italic, sans-serif;
+
+    /** colors */
+    --clr-white: white;
+    --clr-black: black;
+    --clr-primary: #4F5BED;
+    --clr-secondary: #F0C36C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 
+    * NAVBAR SECTION - LuxOrion
+*/
+
+.navbar__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+
+    width: 100%;
+    height: 5rem;
+    padding-inline: 4rem;
+
+    color: var(--clr-black);
+
+    background: whitesmoke;
+    z-index: 1;
+}
+
+.nav-logo {
+    font-family: var(--fn-birthstone);
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-list .nav-items {
+    position: relative;
+    color: var(--clr-black);
+    font-family: var(--fn-poppins);
+    text-decoration: none;
+}
+
+.nav-list .nav-items::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: -2px;
+    margin: auto;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--clr-primary);
+    transition: 250ms;
+}
+
+.nav-list .nav-items.active::after {
+    width: 100%;
+}
+
+/* 
+    * HERO SECTION - LuxOrion
+*/
+
+.hero__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 8rem 7rem;
+}
+
+.hero__section > div {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.hero__section .upper-tagline {
+    font-size: 1rem;
+    font-family: var(--fn-poppins);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.hero__section .person-title {
+    font-size: 5rem;
+    font-weight: lighter;
+    font-family: var(--fn-niconne);
+    color: var(--clr-secondary);
+}
+
+.hero__section .person-description {
+    position: relative;
+    font-size: 1rem;
+    font-family: var(--fn-poppins);
+    text-align: justify;
+    padding-left: 1.5rem;
+    padding-block: 1rem;
+    border-left: 3px solid var(--clr-black);
+    margin-bottom: 1rem;
+}
+
+.hero__section .view_more-btn {
+    color: var(--clr-primary);
+    font-size: 1.1rem;
+    font-family: var(--fn-poppins);
+
+    display: flex;
+    padding: .5rem 2rem;
+    
+    background: transparent;
+    border: 3px solid var(--clr-primary);
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 300ms, scale 100ms;
+}
+
+.hero__section .view_more-btn:active {
+    scale: .95;
+}
+
+.hero__section .view_more-btn.hovered {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.hero__section .view_more-btn img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 10px;
+}
+
+.hero__section .hero-blob {
+    width: 25rem;
+    height: auto;
+}
+
+/*
+    * Profile Section - Ifrit
+*/
+  
+.profil-section-child {
+    width: 100%;
+    position: relative;
+    height: 66.313rem;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: Poppins;
+  }
+
+  .profile {
+    position: relative;
+    top: 4.5rem;
+    left: 40.313rem;
+    font-size: 5.625rem;
+    font-family: Birthstone;
+    color: #4f5bed;
+    text-align: center;
+    display: flex;
+    width: 11.188rem;
+  }
+  
+  .img_part {
+    position: relative;
+    top: 11.375rem;
+    left: 10rem;
+    border-radius: 20px;
+    width: 12rem;
+    height: 10.813rem;
+    object-fit: cover;
+  }
+  .identity-text {
+    margin: 0;
+  }
+  .identity-container {
+    position: relative;
+    display: inline-block;
+    top: 9.5rem;
+    left: 11.063rem;
+    font-weight: 300;
+    text-align: justify;
+    width: 5.25rem;
+  }
+  .identity {
+    position: relative;
+    top: 0.333rem;
+    left: 30.063rem;
+    font-weight: 500;
+    width: 18.125rem;
+  }
+  .profil-section-line {
+    position: relative;
+    top: -19.95rem;
+    left: -0.937rem;
+    border-top: 2px solid #000;
+    width: 40.813rem;
+    height: 0.125rem;
+  }
+  .profile-description {
+    font-family: Poppins;
+  }
+  .profile-description-container {
+    position: relative;
+    top: 3.813rem;
+    left: 9.188rem;
+    font-size: 1.25rem;
+    text-align: justify;
+    width: 40.813rem;
+  }
+  .education {
+    position: relative;
+    top: -14rem;
+    left: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14.5rem;
+    height: 4.25rem;
+  }
+  .education-icon {
+    position: relative;
+    top: -17.55rem;
+    left: -7.5rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    object-fit: cover;
+  }
+  .education-parent {
+    position: relative;
+    top: -20.438rem;
+    left: 63.25rem;
+    width: 17.625rem;
+    height: 4.25rem;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .profil-section-inner {
+    position: relative;
+    top: -48.95rem;
+    left: 52.5rem;
+    border-top: 2px solid #000;
+    width: 41.813rem;
+    height: 0.125rem;
+  }
+  .school-container {
+    position: relative;
+    top: 0rem;
+    left: 2.5rem;
+    font-weight: 500;
+    display: flex;
+    width: 22.5rem;
+    height: 1.938rem;
+  }
+  .group-child {
+    position: relative;
+    top: -1.5rem;
+    left: 0;
+    right: 2rem;
+    border-radius: 50%;
+    background-color: #f0c36c;
+    width: 1.75rem;
+    height: 1.625rem;
+  }
+  .tk-parent {
+    position: relative;
+    top: -33.85rem;
+    left: 56.688rem;
+    width: 25rem;
+    height: 1.938rem;
+  }
+  .school-container {
+    position: relative;
+    top: 0.5rem;
+    left: 2.5rem;
+    font-weight: 500;
+    display: flex;
+    width: 22.5rem;
+    height: 2.25rem;
+  }
+  .group-item {
+    position: relative;
+    top: -1.313rem;
+    left: 0;
+    border-radius: 50%;
+    background-color: #f0c36c;
+    width: 1.75rem;
+    height: 1.625rem;
+  }
+  .sd-parent,
+  .sma-parent {
+    position: relative;
+    top: -32.425rem;
+    left: 56.688rem;
+    width: 25rem;
+    height: 2.25rem;
+  }
+  .sma-parent {
+    top: -31.813rem;
+  }
+  .univ {
+    margin: 0;
+    font-weight: 500;
+  }
+  .FS-job {
+    margin: 0;
+    font-size: 1.063rem;
+  }
+  .univ-container {
+    position: relative;
+    top: 0rem;
+    left: 2.5rem;
+    display: inline-block;
+    width: 27.125rem;
+    height: 3.688rem;
+  }
+  .mahasaraswatiAKm-parent,
+  .uni-parent {
+    position: relative;
+    top: -30rem;
+    left: 56.688rem;
+    width: 29.625rem;
+    height: 3.688rem;
+  }
+  .mahasaraswatiAKm-parent {
+    top: -29rem;
+  }
+  .udayanaF-container {
+    position: absolute;
+    top: 0;
+    left: 2.388rem;
+    display: inline-block;
+    width: 25.925rem;
+    height: 8.563rem;
+  }
+  .group-child2 {
+    position: absolute;
+    top: 0.313rem;
+    left: 0;
+    border-radius: 50%;
+    background-color: #f0c36c;
+    width: 1.675rem;
+    height: 1.625rem;
+  }
+  .udayanaFL-parent {
+    position: absolute;
+    top: 42.5rem;
+    left: 56.688rem;
+    width: 28.313rem;
+    height: 8.563rem;
+    text-align: justify;
+  }
