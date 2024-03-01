@@ -1,60 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Biografi - Mrs. Tini</title>
-    <link rel="stylesheet" href="main.css">
-    <script defer src="main.js"></script>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Website Biografi - Mrs. Tini</title>
+	<link rel="stylesheet" href="main.css" />
+	<script defer src="main.js"></script>
 </head>
 <body>
-
-    <!--
-        * NAVBAR SECTION - LuxOrion
-    -->
-    
-    <nav class="navbar__section">
-        <a href="#" class="nav-logo">Kelompok 6</a>
-        <ul class="nav-list">
-            <li><a href="#" class="nav-items active">Beranda</a></li>
-            <li><a href="#" class="nav-items">Profil</a></li>
-            <li><a href="#" class="nav-items">Pengalaman</a></li>
-            <li><a href="#" class="nav-items">Gallery</a></li>
-        </ul>
-    </nav>
-
-    <!--
-        * HERO SECTION - LuxOrion
+	<!--
+	* NAVBAR SECTION - LuxOrion
     -->
 
-    <section class="hero__section">
-        <div class="main-container">
-            <div class="text-part">
-                <p class="upper-tagline">BIOGRAPHIC OF</p>
-                <h1 class="person-title">Mrs. Tini</h1>
-                <p class="person-description">Mrs. Tini adalah seorang guru yang mengajar di SMK TI BALI GLOBAL DENPASAR sebagai guru Bahasa Inggris. Sebagai pendidik, beliau memiliki dedikasi yang tinggi dalam membimbing para siswa yang di didik olehnya.</p>
-                <button class="view_more-btn">Lihat Lebih <img src="assets/sort_down_purple.png" alt="&triangledown;"></button>
-            </div>
-            <div class="image-part">
-                <img src="assets/hero_blob.png" class="hero-blob">
-            </div>
-        </div>
-    </section>
+	<nav class="navbar__section">
+		<a href="#" class="nav-logo">Kelompok 6</a>
+		<ul class="nav-list">
+			<li><a href="#" class="nav-items active">Beranda</a></li>
+			<li><a href="#profil__section" class="nav-items">Profil</a></li>
+			<li><a href="#" class="nav-items">Pengalaman</a></li>
+			<li><a href="#" class="nav-items">Gallery</a></li>
+		</ul>
+	</nav>
 
-    <!--
-        * PROFILE SECTION - Ifrit
+	<!--
+	* HERO SECTION - LuxOrion
+    -->
+
+	<section id="hero__section" class="hero__section">
+		<div class="main-container">
+			<div class="text-part">
+				<p class="upper-tagline">BIOGRAPHIC OF</p>
+				<h1 class="person-title">Mrs. Tini</h1>
+				<p class="person-description">
+					Mrs. Tini adalah seorang guru yang mengajar di SMK TI
+					BALI GLOBAL DENPASAR sebagai guru Bahasa Inggris.
+					Sebagai pendidik, beliau memiliki dedikasi yang tinggi
+					dalam membimbing para siswa yang di didik olehnya.
+				</p>
+				<button class="view_more-btn">
+					Lihat Lebih
+					<img
+						src="assets/sort_down_purple.png"
+						alt="&triangledown;"
+					/>
+				</button>
+			</div>
+			<div class="image-part">
+				<img src="assets/hero_blob.png" class="hero-blob" />
+			</div>
+		</div>
+	</section>
+
+	<!--
+	* PROFILE SECTION - Ifrit
+    -->
+
+	<section class="profil__section" id="profil__section">
+		<h2 class="profil-title">Profile</h2>
+
+		<div class="profil-container">
+			<div class="identification-part">
+				<div class="identity-container">
+					<div class="img_part"></div>
+					<div class="identity-key">
+						<p class="identity-text">Nama</p>
+						<p class="identity-text">Umur</p>
+						<p class="identity-text">Asal</p>
+						<p class="identity-text">Hobby</p>
+					</div>
+					<div class="identity-value">
+						<p class="identity-text">: Ni Ketut Supartini</p>
+						<p class="identity-text">: 51</p>
+						<p class="identity-text">: Bali, Indonesia</p>
+						<p class="identity-text">: Membaca, Menulis, dll.</p>
+					</div>
+				</div>
+	
+				<div class="profile-description-container">
+					<p>
+						Pada awalnya, Ms. Tini memiliki mimpi untuk menjadi biarawati seperti tokoh yang dikaguminya, yaitu <i>Mother Teresa.</i> Namun, karena Ms. Tini beragama Hindu, ia memilih untuk melaksanakan perbuatan atau berkarma baik dengan menjadi seorang guru.
+					</p>
+					<br />
+					<p>
+						Ms. Tini juga sangat mengagumi orang tuanya. Ayahnya adalah seorang pamen polisi, dari beliau Ms. Tini banyak belajar tentang kehidupan. Selain itu, dorongan untuk belajar bahasa Inggris datang dari beliau yang selalu memperdengarkan radio. <i>BBC</i> dan <i>ABC</i> yang berbahasa Inggris kepadanya. Ketika Ms. Tini memasuki SMP dan SMA, ia sering melakukan micro teaching untuk mata pelajaran Bahasa Inggris.
+					</p>
+				</div>
+			</div>
+	
+			<div class="education-part">
+				<div class="education-title">
+					<img class="education-icon" src="assets/education-icon.png"/>
+					<h4>Education</h4>
+				</div>
+				<div class="education-content">
+					<div class="line-through"></div>
+					
+					<p class="education-place">TK Widya Kumara, Kr. Asem</p>
+					<p class="education-place">SD Negeri 1, Kr. Asem</p>
+					<p class="education-place">SMA Negeri 1, Kr. Asem</p>
+					
+					<div class="univ-1-wrapper">
+						<p class="education-place">Univ. Warmadewa</p>
+						<p class="desc">
+							Fakultas Sastra, Jurusan Bahasa & Sastra Inggris
+						</p>
+					</div>
+					<div class="univ-2-wrapper">
+						<p class="education-place">Univ. Mahasaraswati</p>
+						<p class="desc">
+							Akta mengajar 4 (Surat ijin mengajar untuk S1)
+						</p>
+					</div>
+	
+					<div class="univ-3-wrapper">
+						<p class="education-place">Univ. Udayana</p>
+						<p class="desc">
+							Fakultas Lingustik (translation). Jelang tesis terpaksa ditinggalkan karena masih ada kontrak kerja dengan Konsulat Australia dan AFP (Australian Federal Police) Australia.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--
+	* EXPERIENCE SECTION - ArstWgn
     -->
 
 
 
-    <!--
-        * EXPERIENCE SECTION - ArstWgn
-    -->
-
-
-
-    <!--
-        * GALLERY SECTION - ArstWgn
+	<!--
+	* GALLERY SECTION - ArstWgn
     -->
 
 

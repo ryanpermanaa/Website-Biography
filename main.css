@@ -6,27 +6,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 
 :root {
-    /** fonts */
-    --fn-poppins: "Poppins", 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
-    --fn-birthstone: "Birthstone", italic, sans-serif;
-    --fn-niconne: "Niconne", italic, sans-serif;
+	/** fonts */
+	--fn-poppins: "Poppins", 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+	--fn-birthstone: "Birthstone", italic, sans-serif;
+	--fn-niconne: "Niconne", italic, sans-serif;
 
-    /** colors */
-    --clr-white: white;
-    --clr-black: black;
-    --clr-primary: #4F5BED;
-    --clr-secondary: #F0C36C;
+	/** colors */
+	--clr-white: white;
+	--clr-black: black;
+	--clr-primary: #4F5BED;
+	--clr-secondary: #F0C36C;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+section[class$="__section"] {
+	padding: 4rem 7rem;
 }
 
 
@@ -35,61 +48,62 @@
 */
 
 .navbar__section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-    position: fixed;
+	position: fixed;
 
-    width: 100%;
-    height: 5rem;
-    padding-inline: 4rem;
+	width: 100%;
+	height: 5rem;
+	padding-inline: 4rem;
 
-    color: var(--clr-black);
+	color: var(--clr-black);
 
-    background: whitesmoke;
+	background: whitesmoke;
+	z-index: 1;
 }
 
 .nav-logo {
-    font-family: var(--fn-birthstone);
-    font-size: 2rem;
-    font-weight: 500;
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
+	font-family: var(--fn-birthstone);
+	font-size: 2rem;
+	font-weight: 500;
+	color: black;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .nav-list {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
-    gap: 1rem;
-    list-style: none;
+	gap: 1rem;
+	list-style: none;
 }
 
 .nav-list .nav-items {
-    position: relative;
-    color: var(--clr-black);
-    font-family: var(--fn-poppins);
-    text-decoration: none;
+	position: relative;
+	color: var(--clr-black);
+	font-family: var(--fn-poppins);
+	text-decoration: none;
 }
 
 .nav-list .nav-items::after {
-    content: "";
-    position: absolute;
-    inset-inline: 0;
-    bottom: -2px;
-    margin: auto;
+	content: "";
+	position: absolute;
+	inset-inline: 0;
+	bottom: -2px;
+	margin: auto;
 
-    width: 0;
-    height: 2px;
+	width: 0;
+	height: 2px;
 
-    background: var(--clr-primary);
-    transition: 250ms;
+	background: var(--clr-primary);
+	transition: 250ms;
 }
 
 .nav-list .nav-items.active::after {
-    width: 100%;
+	width: 100%;
 }
 
 /* 
@@ -97,77 +111,220 @@
 */
 
 .hero__section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 8rem 7rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
-.hero__section > div {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+.hero__section>div {
+	display: grid;
+	place-items: center;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
 }
 
 .hero__section .upper-tagline {
-    font-size: 1rem;
-    font-family: var(--fn-poppins);
-    font-weight: 400;
-    letter-spacing: 2px;
+	font-size: 1rem;
+	font-family: var(--fn-poppins);
+	font-weight: 400;
+	letter-spacing: 2px;
 }
 
 .hero__section .person-title {
-    font-size: 5rem;
-    font-weight: lighter;
-    font-family: var(--fn-niconne);
-    color: var(--clr-secondary);
+	font-size: 5rem;
+	font-weight: lighter;
+	font-family: var(--fn-niconne);
+	color: var(--clr-secondary);
 }
 
 .hero__section .person-description {
-    position: relative;
-    font-size: 1rem;
-    font-family: var(--fn-poppins);
-    text-align: justify;
-    padding-left: 1.5rem;
-    padding-block: 1rem;
-    border-left: 3px solid var(--clr-black);
-    margin-bottom: 1rem;
+	position: relative;
+	font-size: 1rem;
+	font-family: var(--fn-poppins);
+	text-align: justify;
+	padding-left: 1.5rem;
+	padding-block: 1rem;
+	border-left: 3px solid var(--clr-black);
+	margin-bottom: 1rem;
 }
 
 .hero__section .view_more-btn {
-    color: var(--clr-primary);
-    font-size: 1.1rem;
-    font-family: var(--fn-poppins);
+	color: var(--clr-primary);
+	font-size: 1.1rem;
+	font-family: var(--fn-poppins);
 
-    display: flex;
-    padding: .5rem 2rem;
-    
-    background: transparent;
-    border: 3px solid var(--clr-primary);
-    border-radius: 10px;
+	display: flex;
+	padding: .5rem 2rem;
 
-    cursor: pointer;
-    transition: all 300ms, scale 100ms;
+	background: transparent;
+	border: 3px solid var(--clr-primary);
+	border-radius: 10px;
+
+	cursor: pointer;
+	transition: all 300ms, scale 100ms;
 }
 
 .hero__section .view_more-btn:active {
-    scale: .95;
+	scale: .95;
 }
 
 .hero__section .view_more-btn.hovered {
-    background: var(--clr-primary);
-    color: var(--clr-white);
+	background: var(--clr-primary);
+	color: var(--clr-white);
 }
 
 .hero__section .view_more-btn img {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 10px;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: 10px;
 }
 
 .hero__section .hero-blob {
-    width: 25rem;
-    height: auto;
+	width: 25rem;
+	height: auto;
+}
+
+/*
+    * Profile Section - Ifrit
+*/
+
+.profil__section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	font-size: 1rem;
+	font-family: var(--fn-poppins);
+	color: var(--clr-black);
+}
+
+.profil-title {
+	position: relative;
+	font-size: 4rem;
+	font-family: var(--fn-birthstone);
+	font-weight: lighter;
+	color: #4f5bed;
+	width: fit-content;
+	margin-bottom: 4rem;
+	margin-left: 2rem;
+}
+
+.profil-title::before {
+	content: "";
+	position: absolute;
+	inset-block: 0;
+	margin-block: auto;
+	right: 120%;
+
+	width: 50vw;
+	height: 2px;
+	background: var(--clr-black);
+}
+
+.profil-title::after {
+	content: "";
+	position: absolute;
+	inset-block: 0;
+	margin-block: auto;
+	left: 120%;
+
+	width: 50vw;
+	height: 2px;
+	background: var(--clr-black);
+}
+
+.profil-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+}
+
+/*? Identification Part */
+
+.img_part {
+	width: 15rem;
+	height: 10rem;
+	
+	background-image: url("assets/teaching.jpg");
+	background-size: cover;
+	background-position: center;
+
+	border-radius: 1rem;
+	margin-right: 5px;
+}
+
+.identity-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.identity-value p {
+	font-weight: 500;
+}
+
+.profile-description-container {
+	text-align: justify;
+}
+
+/*? Education Part */
+
+.education-part {
+	padding-block: 3rem;
+}
+
+.education-part .education-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 2rem;
+}
+
+.education-part > .education-title img {
+	width: 3rem;
+	height: auto;
+}
+
+.education-part > .education-title h4 {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.education-content {
+	position: relative;
+	margin-left: 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+}
+
+.education-content > .line-through {
+	position: absolute;
+	top: 5px;
+	left: -1.38rem;
+	width: 3px;
+	height: 13.9rem;
+	background: var(--clr-secondary);
+}
+
+.education-content .education-place {
+	position: relative;
+	font-weight: 600;
+}
+
+.education-content .education-place::before {
+	content: "";
+	position: absolute;
+	inset-block: 0;
+	margin-block: auto;
+	left: -1.8rem;
+
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+
+	background: var(--clr-secondary);
 }
