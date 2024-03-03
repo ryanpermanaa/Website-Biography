@@ -23,6 +23,11 @@
   padding: 0;
 }
 
+*::selection {
+	background-color: #d1d5fc;
+  color: black;
+}
+
 *,
 *::before,
 *::after {
@@ -31,16 +36,41 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
 }
 
 body {
   overflow-x: hidden;
+
+	--navbar-height: 4rem;
 }
 
-section[class$="__section"] {
-  padding: 4rem 7rem;
+.primary__sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* outline: 2px solid red; */
 }
+
+.inner-section-container {
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	
+  font-size: 1rem;
+  font-family: var(--fn-poppins);
+
+  padding: 4rem 7rem;
+  width: fit-content;
+  margin-inline: auto;
+
+  min-height: 45rem;
+  max-width: 100rem;
+  /* outline: 2px solid red; */
+}
+
 
 /* 
     * NAVBAR SECTION - LuxOrion
@@ -54,13 +84,18 @@ section[class$="__section"] {
   position: fixed;
 
   width: 100%;
-  height: 5rem;
+  height: var(--navbar-height);
   padding-inline: 4rem;
 
   color: var(--clr-black);
 
   background: whitesmoke;
   z-index: 1;
+	transition: 350ms;
+}
+
+.navbar__section.nav-hidden {
+	transform: translateY(-100%);
 }
 
 .nav-logo {
@@ -105,14 +140,12 @@ section[class$="__section"] {
   width: 100%;
 }
 
+
 /* 
     * HERO SECTION - LuxOrion
 */
 
 .hero__section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
@@ -152,9 +185,11 @@ section[class$="__section"] {
   color: var(--clr-primary);
   font-size: 1.1rem;
   font-family: var(--fn-poppins);
+	text-decoration: none;
 
   display: flex;
   padding: 0.5rem 2rem;
+	width: fit-content;
 
   background: transparent;
   border: 3px solid var(--clr-primary);
@@ -184,17 +219,12 @@ section[class$="__section"] {
   height: auto;
 }
 
+
 /*
-    * Profile Section - Ifrit
+    * Profile Section - Ifrit + LuxOrion
 */
 
 .profil__section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  font-size: 1rem;
-  font-family: var(--fn-poppins);
   color: var(--clr-black);
 }
 
@@ -279,7 +309,7 @@ section[class$="__section"] {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .education-part > .education-title img {
@@ -328,16 +358,13 @@ section[class$="__section"] {
   background: var(--clr-secondary);
 }
 
-/* experien */
+/*
+    * Experience Section - ArstWgn + LuxOrion
+*/
 
-.experiences_section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  font-size: 1rem;
-  font-family: var(--fn-poppins);
-  color: var(--clr-black);
+.experience__section {
+	background-color: #181818;
+  color: azure;
 }
 
 .experiences_title {
@@ -356,7 +383,7 @@ section[class$="__section"] {
   position: absolute;
   inset-block: 0;
   margin-block: auto;
-  right: 120%;
+  right: 115%;
 
   width: 50vw;
   height: 2px;
@@ -368,59 +395,44 @@ section[class$="__section"] {
   position: absolute;
   inset-block: 0;
   margin-block: auto;
-  left: 120%;
+  left: 115%;
 
   width: 50vw;
   height: 2px;
   background: whitesmoke;
 }
 
-.gallery_section {
-  display: flex;
-  flex-direction: column;
+.experience-content-wrapper {
+  display: grid;
+  grid-template-columns: .4fr 1fr;
+  justify-items: center;
   align-items: center;
-  position: relative;
-  font-size: 1rem;
-  font-family: var(--fn-poppins);
-  color: var(--clr-black);
+  gap: 4rem;
 }
 
-.gallery_title {
-  position: relative;
-  font-size: 4rem;
-  font-family: var(--fn-birthstone);
-  font-weight: lighter;
-  color: #f0c36c;
-  width: fit-content;
-  margin-bottom: 4rem;
-  margin-left: 2rem;
+.experience-content-wrapper img {
+  width: 18rem;
+  height: auto;
 }
 
-.gallery_title::before {
-  content: "";
-  position: absolute;
-  inset-block: 0;
-  margin-block: auto;
-  right: 120%;
-
-  width: 50vw;
-  height: 2px;
-  background: whitesmoke;
+.experience-text-container p {
+  display: block;
+	font-size: 1rem;
+	font-weight: lighter;
+	max-width: 65rem;
+	text-align: justify;
 }
 
-.gallery_title::after {
-  content: "";
-  position: absolute;
-  inset-block: 0;
-  margin-block: auto;
-  left: 120%;
-
-  width: 50vw;
-  height: 2px;
-  background: whitesmoke;
+.experience-text-container p:first-child:first-letter {
+  float: left;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-right: 5px;
 }
 
-.exp {
-  background-color: #252525;
-  color: azure;
-}
+
+/*
+    * Footer Section - ArstWgn
+*/
+
