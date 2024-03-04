@@ -6,35 +6,27 @@
     <title>Website Biografi - Mrs. Tini</title>
     <link rel="stylesheet" href="main.css" />
     <script defer src="main.js"></script>
-    <!--Bootsrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
-    <!--
+	<!--
 	* NAVBAR SECTION - LuxOrion
-    -->
+	-->
 
     <nav class="navbar__section">
       <a href="#" class="nav-logo">Kelompok 6</a>
       <ul class="nav-list">
         <li><a href="#" class="nav-items active">Beranda</a></li>
         <li><a href="#profil__section" class="nav-items">Profil</a></li>
-        <li><a href="#experiences_section" class="nav-items">Pengalaman</a></li>
-        <li><a href="#gallery_section" class="nav-items">Gallery</a></li>
+        <li><a href="#experience__section" class="nav-items">Pengalaman</a></li>
       </ul>
     </nav>
 
-    <!--
+	<!--
 	* HERO SECTION - LuxOrion
-    -->
+	-->
 
-    <section id="hero__section" class="hero__section">
-      <div class="main-container">
+    <section id="hero__section" class="hero__section primary__sections">
+      <div class="inner-section-container">
         <div class="text-part">
           <p class="upper-tagline">BIOGRAPHIC OF</p>
           <h1 class="person-title">Mrs. Tini</h1>
@@ -44,10 +36,10 @@
             memiliki dedikasi yang tinggi dalam membimbing para siswa yang di
             didik olehnya.
           </p>
-          <button class="view_more-btn">
+          <a class="view_more-btn" href="#profil__section">
             Lihat Lebih
             <img src="assets/sort_down_purple.png" alt="&triangledown;" />
-          </button>
+          </a>
         </div>
         <div class="image-part">
           <img src="assets/hero_blob.png" class="hero-blob" />
@@ -55,159 +47,117 @@
       </div>
     </section>
 
-    <!--
-	* PROFILE SECTION - Ifrit
-    -->
-
-    <section class="profil__section" id="profil__section">
-      <h2 class="profil-title">Profile</h2>
-
-      <div class="profil-container">
-        <div class="identification-part">
-          <div class="identity-container">
-            <div class="img_part"></div>
-            <div class="identity-key">
-              <p class="identity-text">Nama</p>
-              <p class="identity-text">Umur</p>
-              <p class="identity-text">Asal</p>
-              <p class="identity-text">Hobby</p>
-            </div>
-            <div class="identity-value">
-              <p class="identity-text">: Ni Ketut Supartini</p>
-              <p class="identity-text">: 51</p>
-              <p class="identity-text">: Bali, Indonesia</p>
-              <p class="identity-text">: Membaca, Menulis, dll.</p>
-            </div>
-          </div>
-
-          <div class="profile-description-container">
-            <p>
-              Pada awalnya, Ms. Tini memiliki mimpi untuk menjadi biarawati
-              seperti tokoh yang dikaguminya, yaitu <i>Mother Teresa.</i> Namun,
-              karena Ms. Tini beragama Hindu, ia memilih untuk melaksanakan
-              perbuatan atau berkarma baik dengan menjadi seorang guru.
-            </p>
-            <br />
-            <p>
-              Ms. Tini juga sangat mengagumi orang tuanya. Ayahnya adalah
-              seorang pamen polisi, dari beliau Ms. Tini banyak belajar tentang
-              kehidupan. Selain itu, dorongan untuk belajar bahasa Inggris
-              datang dari beliau yang selalu memperdengarkan radio.
-              <i>BBC</i> dan <i>ABC</i> yang berbahasa Inggris kepadanya. Ketika
-              Ms. Tini memasuki SMP dan SMA, ia sering melakukan micro teaching
-              untuk mata pelajaran Bahasa Inggris.
-            </p>
-          </div>
-        </div>
-
-        <div class="education-part">
-          <div class="education-title">
-            <img class="education-icon" src="assets/education-icon.png" />
-            <h4>Education</h4>
-          </div>
-          <div class="education-content">
-            <div class="line-through"></div>
-
-            <p class="education-place">TK Widya Kumara, Kr. Asem</p>
-            <p class="education-place">SD Negeri 1, Kr. Asem</p>
-            <p class="education-place">SMA Negeri 1, Kr. Asem</p>
-
-            <div class="univ-1-wrapper">
-              <p class="education-place">Univ. Warmadewa</p>
-              <p class="desc">
-                Fakultas Sastra, Jurusan Bahasa & Sastra Inggris
-              </p>
-            </div>
-            <div class="univ-2-wrapper">
-              <p class="education-place">Univ. Mahasaraswati</p>
-              <p class="desc">Akta mengajar 4 (Surat ijin mengajar untuk S1)</p>
-            </div>
-
-            <div class="univ-3-wrapper">
-              <p class="education-place">Univ. Udayana</p>
-              <p class="desc">
-                Fakultas Lingustik (translation). Jelang tesis terpaksa
-                ditinggalkan karena masih ada kontrak kerja dengan Konsulat
-                Australia dan AFP (Australian Federal Police) Australia.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--
-	* EXPERIENCE SECTION - ArstWgn
-    -->
-    <section class="exp experiences_section" id="experiences_section">
-      <br /><br /><br />
-      <h2 class="experiences_title">Experiences</h2>
-      <div class="container">
-        <p style="font-size: 1.7rem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ipsum
-          in exercitationem! Nostrum expedita temporibus et laudantium
-          repudiandae, aperiam itaque nam, fugit accusamus nihil impedit
-          voluptas necessitatibus iure incidunt tempore? <br /><br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          fugiat quas odio, fugit, nemo ut laudantium dicta, ipsum eos veniam
-          doloremque earum. Quaerat sapiente nam consectetur quo quibusdam harum
-          dolor?
-        </p>
-      </div>
-      <img src="./assets/random1.jpg" height="500px" alt="" />
-      <br /><br /><br /><br /><br /><br /><br /><br />
-    </section>
-
-    <!--
-	* GALLERY SECTION - ArstWgn
+	<!--
+	* PROFILE SECTION - Ifrit + LuxOrion
 	-->
-    <section class="exp gallery_section" id="gallery_section">
-      <br /><br /><br />
-      <h2 class="gallery_title">Gallery</h2>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3" style="margin-left: 220px">
-            <div class="content">
-              <img
-                src="./assets/vivi.jpg "
-                width="330px"
-                height="553px"
-                alt=""
-              />
+    <section id="profil__section" class="profil__section primary__sections">
+      <div class="inner-section-container">
+        <h2 class="profil-title">Profile</h2>
+        <div class="profil-container">
+          <div class="identification-part">
+            <div class="identity-container">
+              <div class="img_part"></div>
+              <div class="identity-key">
+                <p class="identity-text">Nama</p>
+                <p class="identity-text">Umur</p>
+                <p class="identity-text">Asal</p>
+                <p class="identity-text">Hobby</p>
+              </div>
+              <div class="identity-value">
+                <p class="identity-text">: Ni Ketut Supartini</p>
+                <p class="identity-text">: 51</p>
+                <p class="identity-text">: Bali, Indonesia</p>
+                <p class="identity-text">: Membaca, Menulis, dll.</p>
+              </div>
+            </div>
+            <div class="profile-description-container">
+              <p>
+                Pada awalnya, Ms. Tini memiliki mimpi untuk menjadi biarawati
+                seperti tokoh yang dikaguminya, yaitu <i>Mother Teresa.</i> Namun,
+                karena Ms. Tini beragama Hindu, ia memilih untuk melaksanakan
+                perbuatan atau berkarma baik dengan menjadi seorang guru.
+              </p>
+              <br />
+              <p>
+                Ms. Tini juga sangat mengagumi orang tuanya. Ayahnya adalah
+                seorang pamen polisi, dari beliau Ms. Tini banyak belajar tentang
+                kehidupan. Selain itu, dorongan untuk belajar bahasa Inggris
+                datang dari beliau yang selalu memperdengarkan radio.
+                <i>BBC</i> dan <i>ABC</i> yang berbahasa Inggris kepadanya. Ketika
+                Ms. Tini memasuki SMP dan SMA, ia sering melakukan micro teaching
+                untuk mata pelajaran Bahasa Inggris.
+              </p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="row" style="margin-left: 1px; margin-bottom: 16px">
-              <div class="col-md-1">
-                <div class="content">
-                  <img src="./assets/random1.jpg" width="534px" alt="" />
-                </div>
-              </div>
+          <div class="education-part">
+            <div class="education-title">
+              <img class="education-icon" src="assets/education-icon.png" />
+              <h4>Education</h4>
             </div>
-            <div class="row" style="margin-left: 1px">
-              <div class="col-md-7">
-                <div class="content">
-                  <img src="./assets/takko.png" width="235px" alt="" />
-                </div>
+            <div class="education-content">
+              <div class="line-through"></div>
+              <p class="education-place">TK Widya Kumara, Kr. Asem</p>
+              <p class="education-place">SD Negeri 1, Kr. Asem</p>
+              <p class="education-place">SMA Negeri 1, Kr. Asem</p>
+              <div class="univ-1-wrapper">
+                <p class="education-place">Univ. Warmadewa</p>
+                <p class="desc">
+                  Fakultas Sastra, Jurusan Bahasa & Sastra Inggris
+                </p>
               </div>
-              <div class="col-md-2" style="margin-left: px">
-                <div class="content">
-                  <img src="./assets/takko2.png" width="285px" alt="" />
-                </div>
+              <div class="univ-2-wrapper">
+                <p class="education-place">Univ. Mahasaraswati</p>
+                <p class="desc">Akta mengajar 4 (Surat ijin mengajar untuk S1)</p>
+              </div>
+              <div class="univ-3-wrapper">
+                <p class="education-place">Univ. Udayana</p>
+                <p class="desc">
+                  Fakultas Lingustik (translation). Jelang tesis terpaksa
+                  ditinggalkan karena masih ada kontrak kerja dengan Konsulat
+                  Australia dan AFP (Australian Federal Police) Australia.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+	<!--
+	* EXPERIENCE SECTION - ArstWgn + LuxOrion
+	-->
+
+    <section id="experience__section" class="experience__section primary__sections" >
+      <div class="inner-section-container">
+        
+        <h2 class="experiences_title">Experiences</h2>
+        <div class="experience-content-wrapper">
+          <img src="assets/experience-illustration.svg" alt="">
+          <div class="experience-text-container">
+            <p>
+              Dalam perjalanan karirnya, Ms. Tini mengalami berbagai pengalaman yang membentuknya menjadi seorang guru yang berpengalaman dan terampil. Saat masih kuliah, Ms. Tini diajak oleh seorang dosen untuk menjadi pengajar di sebuah lembaga kursus bahasa Inggris <i>(ILC Anugrah)</i>.
+                  </p>
+                  <br>
+                  <p>
+                    Setelah tamat S1, Ms. Tini bekerja di <i>Qantas Holidays Australia (Tour East)</i> di pagi hari hingga jam 5 sore, namun tetap meluangkan waktu untuk mengajar di sore hari di lembaga kursus tersebut (ILC Anugrah). Ketika Ms. Tini memutuskan untuk resign dari Qantas Holidays Australia, pihak ILC Anugrah mengirimnya dan beberapa rekan guru untuk menjadi pengajar bahasa Inggris di Polda Bali untuk acara konferensi polisi se-Asia.
+                  </p>
+                  <br>
+                  <p>
+                    Ms. Tini kemudian menjadi interpreter di kepolisian daerah, pengadilan, dan rumah tahanan bekerja sama dengan konsulat Australia dan <i>AFP</i> untuk kasus-kasus asing, utamanya kasus narkotika. Selama 3 tahun, Ms. Tini juga mengajar bahasa Inggris di <i>PDN School</i> sebelum sekolah tersebut mendapat guru bahasa Inggris tetap. Setelah itu sekarang Ms. Tini mengajar di <i>SMK TI BALI GLOBAL DENPASAR</i>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <!--
+	* FOOTER SECTION - ArstWgn
+	-->
+
+  <footer class="footer__section">
+  </footer>
+
   </body>
 </html>
