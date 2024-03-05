@@ -24,7 +24,7 @@
 }
 
 *::selection {
-	background-color: #d1d5fc;
+  background-color: #d1d5fc;
   color: black;
 }
 
@@ -41,7 +41,7 @@ html {
 body {
   overflow-x: hidden;
 
-	--navbar-height: 4rem;
+  --navbar-height: 4rem;
 }
 
 .primary__sections {
@@ -54,11 +54,11 @@ body {
 
 .inner-section-container {
   position: relative;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
-	
+
   font-size: 1rem;
   font-family: var(--fn-poppins);
 
@@ -70,7 +70,6 @@ body {
   max-width: 100rem;
   /* outline: 2px solid red; */
 }
-
 
 /* 
     * NAVBAR SECTION - LuxOrion
@@ -91,11 +90,11 @@ body {
 
   background: whitesmoke;
   z-index: 1;
-	transition: 350ms;
+  transition: 350ms;
 }
 
 .navbar__section.nav-hidden {
-	transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 .nav-logo {
@@ -139,7 +138,6 @@ body {
 .nav-list .nav-items.active::after {
   width: 100%;
 }
-
 
 /* 
     * HERO SECTION - LuxOrion
@@ -185,11 +183,11 @@ body {
   color: var(--clr-primary);
   font-size: 1.1rem;
   font-family: var(--fn-poppins);
-	text-decoration: none;
+  text-decoration: none;
 
   display: flex;
   padding: 0.5rem 2rem;
-	width: fit-content;
+  width: fit-content;
 
   background: transparent;
   border: 3px solid var(--clr-primary);
@@ -218,7 +216,6 @@ body {
   width: 25rem;
   height: auto;
 }
-
 
 /*
     * Profile Section - Ifrit + LuxOrion
@@ -363,7 +360,7 @@ body {
 */
 
 .experience__section {
-	background-color: #181818;
+  background-color: #181818;
   color: azure;
 }
 
@@ -404,7 +401,7 @@ body {
 
 .experience-content-wrapper {
   display: grid;
-  grid-template-columns: .4fr 1fr;
+  grid-template-columns: 0.4fr 1fr;
   justify-items: center;
   align-items: center;
   gap: 4rem;
@@ -417,10 +414,10 @@ body {
 
 .experience-text-container p {
   display: block;
-	font-size: 1rem;
-	font-weight: lighter;
-	max-width: 65rem;
-	text-align: justify;
+  font-size: 1rem;
+  font-weight: lighter;
+  max-width: 65rem;
+  text-align: justify;
 }
 
 .experience-text-container p:first-child:first-letter {
@@ -431,8 +428,53 @@ body {
   margin-right: 5px;
 }
 
-
 /*
-    * Footer Section - ArstWgn
+    * Footer Section - ArstWgn    
 */
 
+svg {
+  background-color: #181818;
+}
+
+.footer_title {
+  font-size: 4rem;
+  font-family: var(--fn-birthstone);
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.footer__section {
+  background-color: black;
+}
+
+.by {
+  color: #f0c36c;
+  margin-left: 1rem;
+}
+
+.team {
+  margin-left: 8cm;
+  color: #f0c36c;
+  font-family: var(--fn-poppins);
+}
+
+.garis {
+  max-width: 1000px;
+  height: 100px;
+  color: #f0c36c;
+  margin-left: 70px;
+}
+
+.devteam {
+  font-size: 1.4rem;
+  color: whitesmoke;
+}
+
+.k6 {
+  position: relative;
+}
+
+.bi-github,
+.bi-instagram {
+  color: #f0c36c;
+}
