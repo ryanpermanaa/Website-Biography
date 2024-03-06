@@ -7,18 +7,39 @@ var observer;
 //* NAVBAR SECTION - LuxOrion
 
 const nav = document.querySelector(".navbar__section");
+const navHam = document.querySelector(".navbar-hamburger > i");
+const navHamWrapper = document.querySelector(".navbar-hamburger");
+
+//? Navbar Hamburger
+navHamWrapper.addEventListener("click", toggleMobileNavbar);
+
+function toggleMobileNavbar() {
+    navHamWrapper.classList.toggle("active");
+
+    if (navHamWrapper.classList.contains("active")) {
+        navHam.classList = "fa-solid fa-xmark";
+    } else {
+        navHam.classList = "fa-solid fa-bars";
+    }
+    
+    navHamWrapper.classList += " fa-2xl";
+}
 
 //? Hideable Navbar Effect
 let lastScrollY = window.scrollY;
 
 function detectScrollDirection() {
-    if (lastScrollY < window.scrollY) {
-        nav.classList.add("nav-hidden");
-    } else {
-        nav.classList.remove("nav-hidden");
+
+    if (!navHamWrapper.classList.contains("active")) {
+        if (lastScrollY < window.scrollY) {
+            nav.classList.add("nav-hidden");
+        } else {
+            nav.classList.remove("nav-hidden");
+        }
+    
+        lastScrollY = window.scrollY;
     }
 
-    lastScrollY = window.scrollY;
 }
 
 window.addEventListener("scroll", detectScrollDirection);
@@ -26,6 +47,11 @@ window.addEventListener("scroll", detectScrollDirection);
 //? Navbar Active Effect
 navItems.forEach(item => {
     item.onclick = ()=>{
+        if (window.screen.width < 920) {
+            toggleMobileNavbar();
+            return;
+        }
+        
         navItems.forEach(item => item.classList.remove("active"));
         item.classList.add("active");
 
@@ -63,23 +89,8 @@ observer = new IntersectionObserver((entries) => {
             navItems[index].classList.add("active");
         }
     });
-}, {threshold: 0.8})
+}, {threshold: 0.5})
 
 primary_sections.forEach(section => {
     observer.observe(section);
 })
-
-//* HERO SECTION - LuxOrion
-
-const viewMoreBtn = document.querySelector(".view_more-btn");
-const viewMoreBtn_img = document.querySelector(".view_more-btn img");
-
-viewMoreBtn.onmouseover = ()=>{
-    viewMoreBtn.classList.add("hovered");
-    viewMoreBtn_img.setAttribute("src", "assets/sort_down_white.png");
-}
-
-viewMoreBtn.onmouseout = ()=>{
-    viewMoreBtn.classList.remove("hovered");
-    viewMoreBtn_img.setAttribute("src", "assets/sort_down_purple.png");
-}

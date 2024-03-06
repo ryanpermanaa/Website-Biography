@@ -18,9 +18,14 @@
   --clr-secondary: #f0c36c;
 }
 
+
 * {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, li, ul, ol, p {
+  margin: 0;
 }
 
 *::selection {
@@ -49,6 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
   /* outline: 2px solid red; */
 }
 
@@ -82,15 +88,29 @@ body {
 
   position: fixed;
 
-  width: 100%;
+  width: 100vw;
   height: var(--navbar-height);
   padding-inline: 4rem;
 
   color: var(--clr-black);
 
+  z-index: 999;
+  transition: 350ms;
+}
+
+.navbar__section * {
+  z-index: 2;
+}
+
+.navbar-background {
+  position: absolute;
+  inset: 0;
   background: whitesmoke;
   z-index: 1;
-  transition: 350ms;
+}
+
+.navbar-hamburger {
+  display: none;
 }
 
 .navbar__section.nav-hidden {
@@ -162,7 +182,7 @@ body {
 }
 
 .hero__section .person-title {
-  font-size: 5rem;
+  font-size: clamp(3.5rem, 7vw, 5rem);
   font-weight: lighter;
   font-family: var(--fn-niconne);
   color: var(--clr-secondary);
@@ -197,14 +217,21 @@ body {
   transition: all 300ms, scale 100ms;
 }
 
+.hero__section .view_more-btn i {
+  margin-left: 1rem;
+  align-self: center;
+  padding-bottom: 2px;
+}
+
+.hero__section .view_more-btn:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+}
+
 .hero__section .view_more-btn:active {
   scale: 0.95;
 }
 
-.hero__section .view_more-btn.hovered {
-  background: var(--clr-primary);
-  color: var(--clr-white);
-}
 
 .hero__section .view_more-btn img {
   width: 1.5rem;
@@ -213,7 +240,7 @@ body {
 }
 
 .hero__section .hero-blob {
-  width: 25rem;
+  width: calc(10rem + 15vw);
   height: auto;
 }
 
@@ -262,13 +289,13 @@ body {
 
 .profil-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr .8fr;
   gap: 4rem;
 }
 
 /*? Identification Part */
 
-.img_part {
+.profil__section .img_part {
   width: 15rem;
   height: 10rem;
 
@@ -285,6 +312,12 @@ body {
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.identity-container .identity-info {
+  display: flex;
+  gap: 1rem;
 }
 
 .identity-value p {
@@ -305,13 +338,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   margin-bottom: 2.5rem;
-}
-
-.education-part > .education-title img {
-  width: 3rem;
-  height: auto;
 }
 
 .education-part > .education-title h4 {
@@ -332,7 +360,7 @@ body {
   top: 5px;
   left: -1.38rem;
   width: 3px;
-  height: 13.9rem;
+  height: 98%;
   background: var(--clr-secondary);
 }
 
@@ -432,37 +460,50 @@ body {
     * Footer Section - ArstWgn    
 */
 
-svg {
+.footer__section {
+  position: relative;
+  top: 8rem;
+  background-color: var(--clr-black);
+  height: max-content;
+}
+
+.inner-footer-container {
+  padding: 2rem 4rem;
+  margin-inline: auto;
+
+  max-height: 16rem;
+  max-width: 100rem;
+}
+
+.footer__section svg {
+  position: absolute;
+  left: 0;
+  top: -15vw;
   background-color: #181818;
+}
+
+.footer__section *:not(svg) {
+  z-index: 1;
 }
 
 .footer_title {
   font-size: 4rem;
   font-family: var(--fn-birthstone);
   color: #ffffff;
-  margin-left: 2rem;
-}
-
-.footer__section {
-  background-color: black;
+  margin-bottom: 0 !important;
 }
 
 .by {
-  color: #f0c36c;
-  margin-left: 1rem;
+  color: var(--clr-secondary);
+  margin-bottom: 0 !important;
 }
 
 .team {
-  margin-left: 8cm;
-  color: #f0c36c;
+  position: relative;
+  color: var(--clr-secondary);
   font-family: var(--fn-poppins);
-}
-
-.garis {
-  max-width: 1000px;
-  height: 100px;
-  color: #f0c36c;
-  margin-left: 70px;
+  text-align: start;
+  margin-bottom: 1rem;
 }
 
 .devteam {
@@ -474,7 +515,166 @@ svg {
   position: relative;
 }
 
+.devteam .list-inner span::first-letter {
+  color: var(--clr-secondary);
+}
+
+.devteam .list-inner span i {
+  opacity: .5;
+  font-weight: lighter;
+}
+
+.footer__section .garis-element {
+  width: 2px;
+  height: 5rem;
+  background: var(--clr-secondary);
+  margin-inline: auto;
+}
+
 .bi-github,
 .bi-instagram {
-  color: #f0c36c;
+  color: var(--clr-secondary);
+}
+
+
+/*
+    * RESPONSIVE STATION  
+*/
+
+@media only screen and (max-width: 920px) {
+  .inner-section-container {
+    padding-block: 3rem;
+  }
+
+  .inner-section-container,
+  .inner-footer-container {
+    padding-inline: 2rem;
+  }
+
+  /*? Navbar Section */
+  .navbar__section {
+    padding-inline: 1.5rem;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+
+    height: calc(100vh - var(--navbar-height));
+    width: 100vw;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgba(18, 18, 18, 0.721);
+    z-index: -1;
+    
+    transform: translateY(-100%);
+    transition: 500ms ease-in-out;
+  }
+
+  .nav-list .nav-items {
+    display: block;
+    width: 70vw;
+    text-align: center;
+
+    color: var(--clr-white);
+    font-size: 2rem;
+    font-style: italic;
+
+    background: var(--clr-white);
+    color: var(--clr-black);
+    padding-block: 5px;
+
+    border-radius: 100vmax;
+    transition: 250ms;
+  }
+
+  .nav-list .nav-items:active {
+    background: var(--clr-primary);
+    color: white;
+  }
+
+  .navbar-hamburger.active ~ .nav-list {
+    transform: translateY(0);
+  }
+  
+  .navbar-hamburger {
+    display: flex;
+    width: 1.8rem;
+    height: 1.8rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /*? Hero Section */
+  .hero__section > div {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__section .image-part {
+    display: none;
+  }
+
+
+  /*? Profile Section */
+  .profil__section .img_part {
+    width: 100%;
+  }
+
+
+  /*? Experience Section */
+  .experience__section {
+    padding-bottom: 4rem;
+  }
+
+  .experience__section img {
+    display: none;
+  }
+  
+  .experience-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+
+  /*? Footer Section */
+  .footer__section {
+    top: 0;
+  }
+
+  .inner-footer-container {
+    max-height: unset;
+  }
+
+  .inner-footer-container > div > .garis {
+    display: none;
+  }
+
+  .inner-footer-container > div > .team-section {
+    display: grid;
+    width: 100%;
+  }
+
+  .footer__section .devteam .icons {
+    display: flex;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .footer__section .k6 {
+    margin-bottom: 2rem;
+  }
+
+}
+
+@media only screen and (max-width: 1050px) {
+  /*? Profile Section */
+  .profil-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
