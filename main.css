@@ -239,9 +239,10 @@ body {
   margin-left: 10px;
 }
 
-.hero__section .hero-blob {
-  width: calc(10rem + 15vw);
+.hero__section .hero-illustration {
+  width: max(30vw, 13rem);
   height: auto;
+  margin-top: 2rem;
 }
 
 /*
