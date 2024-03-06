@@ -182,7 +182,7 @@ body {
 }
 
 .hero__section .person-title {
-  font-size: clamp(3.5rem, 7vw, 5rem);
+  font-size: clamp(4rem, 7vw, 5rem);
   font-weight: lighter;
   font-family: var(--fn-niconne);
   color: var(--clr-secondary);
@@ -261,7 +261,6 @@ body {
   color: #4f5bed;
   width: fit-content;
   margin-bottom: 4rem;
-  margin-left: 2rem;
 }
 
 .profil-title::before {
@@ -401,7 +400,6 @@ body {
   color: #f0c36c;
   width: fit-content;
   margin-bottom: 4rem;
-  margin-left: 2rem;
 }
 
 .experiences_title::before {
@@ -594,7 +592,8 @@ body {
     transition: 250ms;
   }
 
-  .nav-list .nav-items:active {
+  .nav-list .nav-items:active,
+  .nav-list .nav-items.active {
     background: var(--clr-primary);
     color: white;
   }
