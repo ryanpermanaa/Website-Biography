@@ -45,7 +45,6 @@ html {
 
 body {
   overflow-x: hidden;
-
   --navbar-height: 4rem;
 }
 
@@ -461,9 +460,8 @@ body {
 
 .footer__section {
   position: relative;
-  top: 8rem;
+  margin-top: 8rem;
   background-color: var(--clr-black);
-  height: max-content;
 }
 
 .inner-footer-container {
@@ -647,11 +645,15 @@ body {
 
   /*? Footer Section */
   .footer__section {
-    top: 0;
+    margin-top: 0;
   }
 
   .inner-footer-container {
     max-height: unset;
+  }
+
+  .inner-footer-container > div > .k6 {
+    width: 100%;
   }
 
   .inner-footer-container > div > .garis {
